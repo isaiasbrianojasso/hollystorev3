@@ -141,20 +141,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--
+
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Services
+                                    Tools
                                 </button>
                             </h2>
 
                             <div id="collapseOne" class="accordion-collapse collapse "
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <a href="/Admin/sms_gateway/show">Configurar API SMS integradas</a>
+                                    <a href="/Admin/sms_gateway/show">Tools</a>
                                 </div>
-                            </div>-->
+                            </div>
                         </div>
 
 

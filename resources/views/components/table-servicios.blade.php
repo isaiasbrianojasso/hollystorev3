@@ -8,7 +8,6 @@
             <th>Descripcion</th>
             <th>Precio</th>
             <th>imagen</th>
-
             <th>Estatus</th>
             <th>Opcion</th>
         </tr>

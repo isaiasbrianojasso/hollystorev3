@@ -274,3 +274,58 @@
         </div>
     </div>
 </div>
+
+
+<!-- Tiempo modal content -->
+<div class="modal fade" id="modal_tiempo" tabindex="-1" aria-labelledby="varyingcontentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Tiempo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Fecha Actual: {{\Carbon\Carbon::now()}}</p>
+
+                <form action="/agregar_tiempo">
+                    @csrf
+                    @method('POST')
+                    <div class="row">
+                        <div class="mb-3 col-md-12">
+                            <label for="customer-name" class="col-form-label">Nombre Cliente:</label>
+                            <select name="iduser" id="iduser" class="form-control">
+                                @foreach (App\Models\User::all() as $user)
+                                <option value="{{$user->id}}">{{$user->name}} [ Fecha Vencimiento: {{Auth::user()->fechafinal}} ]
+
+                                </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <label for="message-text" class="col-form-label">Cantidad Manual:</label>
+                            <select name="tiempo" id="tiempo" class="form-control">
+                                <option value="7">7 dias</option>
+                                <option value="15">15 dias</option>
+                                <option value="30">30 dias</option>
+                                <option value="3">3 Meses</option>
+                                <option value="6">6 Meses</option>
+                                <option value="1">1 Año</option>
+                                <option value="2">2 Años</option>
+                            </select>
+                        </div>
+
+
+                        <div class="mb-3 col-md-12">
+                            <label for="message-text" class="col-form-label">Notas:</label>
+                            <textarea name="notas" id="notas" class="form-control" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Regresar</button>
+                <button type="submit" class="btn btn-primary">Agregar Creditos</button> </form>
+
+            </div>
+        </div>
+    </div>
+</div>

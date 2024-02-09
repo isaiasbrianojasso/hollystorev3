@@ -23,6 +23,68 @@ class ControllerBase extends Controller
     {
         //
     }
+
+       /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function agregar_tiempo(Request $request)
+    {
+        //$tiempo=User::find($request->iduser);
+        //$inicio=$tiempo->fechactivo;
+        //$final=$tiempo->fechafinal;
+        $date = new \DateTime(system('Y-m-d'), new \DateTimeZone('America/Mexico_City'));
+        $objDateTime = new \DateTime(system('Y-m-d'), new \DateTimeZone('America/Mexico_City'));
+        //$timestamp = $date->format('U');
+        // $renta = $request->get('tiempo');
+        $tiempo = \App\Models\User::find($request->iduser);
+        $tiempo->fechaactivo = $objDateTime;
+        //$tiempo->plan = $request->get('plan');
+        $tiempo->fechafinal = $date;
+
+        switch ($request->get('tiempo')) {
+            case "7":
+                $tiempo->fechafinal =  $tiempo->fechafinal->modify('7days');
+                $tiempo->plan_id = 10;
+
+                break;
+            case "15":
+                $tiempo->fechafinal =  $tiempo->fechafinal->modify('15days');
+                $tiempo->plan_id = 11;
+
+                break;
+            case "30":
+                $tiempo->fechafinal =  $tiempo->fechafinal->modify('30days');
+                $tiempo->plan_id = 5;
+
+                break;
+            case "3":
+                $tiempo->fechafinal =  $tiempo->fechafinal->modify('3month');
+                $tiempo->plan_id = 8;
+
+                break;
+            case "6":
+                $tiempo->fechafinal =  $tiempo->fechafinal->modify('6month');
+                $tiempo->plan_id = 9;
+
+                break;
+            case "1":
+                $tiempo->fechafinal =  $tiempo->fechafinal->modify('1year');
+                $tiempo->plan_id = 5;
+
+                break;
+
+            case "2":
+                $tiempo->fechafinal =  $tiempo->fechafinal->modify('2year');
+                $tiempo->plan_id = 4;
+
+                break;
+        }
+        $tiempo->save();
+        return back();
+    }
     public function generateRandomString($length = 10)
     {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

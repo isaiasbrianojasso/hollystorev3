@@ -23,9 +23,14 @@
                     </x-table-servicios>
                 </div>
                 <div class="tab-pane fade" id="pills-api" role="tabpanel" aria-labelledby="pills-contact-tab"
-                    tabindex="0">...</div>
+                    tabindex="0">
+                    <x-table-api>
+                    </x-table-api>
+                </div>
                 <div class="tab-pane fade" id="pills-creditos" role="tabpanel" aria-labelledby="pills-disabled-tab"
-                    tabindex="0">...</div>
+                    tabindex="0">
+             <x-table-creditos></x-table-creditos>
+                </div>
 
             </div>
         </div>

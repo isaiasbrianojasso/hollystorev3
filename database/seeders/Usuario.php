@@ -53,8 +53,9 @@ class Usuario extends Seeder
         $plan->save();
 
 
+
         $plan= new Plan();
-        $plan->nombre="Rent 1y";
+        $plan->nombre="Rent 2 years plan";
         $plan->tipo="rent1y";
         $plan->descripcion="the best plan for most user include some services extra ";
         $plan->estatus=1;
@@ -62,18 +63,56 @@ class Usuario extends Seeder
 
 
         $plan= new Plan();
-        $plan->nombre="Rent 1w";
+        $plan->nombre="Rent 1 year plan";
+        $plan->tipo="rent1y";
+        $plan->descripcion="the best plan for most user include some services extra ";
+        $plan->estatus=1;
+        $plan->save();
+
+
+        $plan= new Plan();
+        $plan->nombre="Rent 1 week plan";
         $plan->tipo="rent1w";
         $plan->descripcion="the best plan for most user include some services extra ";
         $plan->estatus=1;
         $plan->save();
 
         $plan= new Plan();
-        $plan->nombre="Rent 1m";
+        $plan->nombre="Rent 1 month plan";
         $plan->tipo="rent1m";
         $plan->descripcion="the best plan for most user include some services extra ";
         $plan->estatus=1;
         $plan->save();
+
+        $plan= new Plan();
+        $plan->nombre="Rent 3 month plan";
+        $plan->tipo="rent3m";
+        $plan->descripcion="the best plan for most user include some services extra ";
+        $plan->estatus=1;
+        $plan->save();
+
+        $plan= new Plan();
+        $plan->nombre="Rent 6 month plan";
+        $plan->tipo="rent6m";
+        $plan->descripcion="the best plan for most user include some services extra ";
+        $plan->estatus=1;
+        $plan->save();
+
+        $plan= new Plan();
+        $plan->nombre="Rent 7 days";
+        $plan->tipo="rent7days";
+        $plan->descripcion="the best plan for most user include some services extra ";
+        $plan->estatus=1;
+        $plan->save();
+
+        $plan= new Plan();
+        $plan->nombre="Rent 15 days";
+        $plan->tipo="rent15days";
+        $plan->descripcion="the best plan for most user include some services extra ";
+        $plan->estatus=1;
+        $plan->save();
+
+
 
 
         $plan= new Plan();

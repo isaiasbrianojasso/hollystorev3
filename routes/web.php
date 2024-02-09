@@ -41,6 +41,7 @@ Route::middleware([
     Route::get('/admin/creditos/show/{id}', [ControllerBase::class, 'show_creditos']);
     Route::get('/recuerda_pago/{id}', [ControllerBase::class, 'recuerda_pago']);
     Route::get('/reciclar_creditos/{idcreditos}', [ControllerBase::class, 'reciclar_creditos']);
+    Route::get('/agregar_tiempo', [ControllerBase::class, 'agregar_tiempo']);
 
 
 

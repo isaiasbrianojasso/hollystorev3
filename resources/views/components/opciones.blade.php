@@ -1,5 +1,6 @@
 <div class="container">
-    <div class="m-2 row">
+    <div class="m-2 shadow-md row">
+
         <div class="col-lg-3">
             <div class="card h-100">
                 <div class="card-body d-flex flex-column justify-content-between">
@@ -55,7 +56,9 @@
         </div>-->
         <ul class="m-3 nav nav-tabs" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-usuarios-tab" data-bs-toggle="pill" data-bs-target="#pills-usuarios" type="button" role="tab" aria-controls="pills-usuarios" aria-selected="true">Usuarios</button>
+              <button class="nav-link active" id="pills-usuarios-tab" data-bs-toggle="pill" data-bs-target="#pills-usuarios" type="button" role="tab" aria-controls="pills-usuarios" aria-selected="true">
+
+                Usuarios</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="pills-servicios-tab" data-bs-toggle="pill" data-bs-target="#pills-servicios" type="button" role="tab" aria-controls="pills-servicios" aria-selected="false">Servicios</button>

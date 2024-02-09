@@ -13,10 +13,15 @@ return new class extends Migration
     {
         Schema::create('publicacions', function (Blueprint $table) {
             $table->id();
-            $table->string("Nombre");
+            $table->string("nombre");
+            $table->string("titulo");
             $table->string("descripcion");
-            $table->string("vigencia");
-            $table->string("descuento");
+            $table->string("fuente");
+            $table->string("duraccion");
+            $table->string("plataforma");
+            $table->string("categoria");
+            $table->string("status")->nullable();
+            $table->string("imagen")->nullable();
 
             $table->string("c1")->nullable();
             $table->string("c2")->nullable();
