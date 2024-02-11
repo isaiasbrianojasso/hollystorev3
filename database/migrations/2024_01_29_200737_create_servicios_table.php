@@ -27,7 +27,6 @@ return new class extends Migration
             $table->string("c5")->nullable();
             $table->string("c6")->nullable();
             $table->string("c7")->nullable();
-
             $table->timestamps();
         });
     }

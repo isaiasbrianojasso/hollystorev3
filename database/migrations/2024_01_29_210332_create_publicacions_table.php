@@ -22,7 +22,8 @@ return new class extends Migration
             $table->string("categoria");
             $table->string("status")->nullable();
             $table->string("imagen")->nullable();
-
+            $table->integer('id_user')->unsigned()->nullable();
+            $table->foreign('id_user')->references('id')->on('users')->nullable();
             $table->string("c1")->nullable();
             $table->string("c2")->nullable();
             $table->string("c3")->nullable();

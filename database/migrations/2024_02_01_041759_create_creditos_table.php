@@ -13,11 +13,16 @@ return new class extends Migration
     {
         Schema::create('creditos', function (Blueprint $table) {
             $table->id();
-            $table->integer('ID_Usuario')->nullable();
+          //  $table->integer('ID_Usuario')->nullable();
+
+            $table->integer('ID_Usuario')->unsigned();
+            $table->foreign('ID_Usuario')->references('id')->on('users');
             $table->float('Cantidad')->nullable();
             $table->boolean('Operacion')->nullable();
-            $table->integer('ID_Autorizo')->nullable();
+          //  $table->integer('ID_Autorizo')->nullable();
             $table->integer('ID_Metodo')->nullable();
+            $table->integer('ID_Autorizo')->unsigned();
+            $table->foreign('ID_Autorizo')->references('id')->on('users');
             $table->timestamps();
         });
     }

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ControllerBase;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use App\Models\Servicio;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,13 +26,44 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard',[
+            'Servicio' => Servicio::all()]);
     })->name('dashboard');
 
     Route::get('/Admin', function () {
-        return view('Admin.show');
+        return view('Admin.show',[
+            'Servicio' => Servicio::all()]);
     })->name('admin');
 
+    Route::get('/Services/show', function () {
+        return view('Services.show',[
+            'Servicio' => Servicio::all()]);
+    })->name('admin');
+
+    Route::get('/Services/Apple', function () {
+        return view('Services.Apple',[
+            'Servicio' => Servicio::all()]);
+    })->name('admin');
+
+    Route::get('/Services/Call', function () {
+        return view('Services.Call',[
+            'Servicio' => Servicio::all()]);
+    })->name('admin');
+
+    Route::get('/Services/Email', function () {
+        return view('Services.Email',[
+            'Servicio' => Servicio::all()]);
+    })->name('admin');
+
+    Route::get('/Services/SMS', function () {
+        return view('Services.SMS',[
+            'Servicio' => Servicio::all()]);
+    })->name('admin');
+
+    Route::get('/Services/Xiaomi', function () {
+        return view('Services.Xiaomi',[
+            'Servicio' => Servicio::all()]);
+    })->name('admin');
 
     Route::match(['get', 'post'],'/agregar_usuario', [ControllerBase::class, 'agregar_usuario'])->name('agregar_usuario');
     Route::match(['get', 'post'],'/editar_usuario', [ControllerBase::class, 'editar_usuario'])->name('editar_usuario');

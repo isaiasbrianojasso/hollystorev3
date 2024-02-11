@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('tipo');
-            $table->string('id_api');
+            $table->integer('id_api')->unsigned();
+            $table->foreign('id_api')->references('id')->on('apis');
+        //    $table->string('id_api');
             $table->string('precio');
             $table->integer('estatus');
             $table->string("c1")->nullable();
